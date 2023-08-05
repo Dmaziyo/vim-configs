@@ -60,8 +60,8 @@ nnoremap <Leader>u   <C-u>
 " find current file in explorer
 nnoremap <leader>fl  :action  SelectInProjectView<CR>
 " tab operation
-nnoremap tn gtt
-nnoremap tp gT
+nnoremap <leader>tl gtt
+nnoremap <leader>th gT
 " Quit normal mode
 nnoremap <Space>wq  :action CloseContent<CR>
 " Window operation
