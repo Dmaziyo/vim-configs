@@ -70,6 +70,10 @@
     },
 
     {
+      "before": ["<leader>", "f", "l"],
+      "commands": ["workbench.files.action.showActiveFileInExplorer"]
+    },
+    {
       "before": ["<leader>", "t", "h"],
       "commands": ["workbench.action.previousEditor"]
     },
@@ -100,7 +104,12 @@
     {
       "before": ["L"],
       "after": ["g", "_"]
-    }
+    },
+
+    {
+      "before": ["<C-a>"],
+      "after": ["g", "g","V","G"]
+    },
   ],
   "vim.visualModeKeyBindings": [
     {
@@ -118,8 +127,7 @@
   "vim.leader": "<space>",
   "vim.hlsearch": true,
   "vim.handleKeys": {
-    "<C-a>": false,
     "<C-f>": false,
-    "<C-j>": false
+    "<C-j>": false,
   }
 }
