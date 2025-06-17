@@ -62,7 +62,7 @@ nnoremap <Leader>u   <C-u>
 nnoremap <leader>fl  :action  SelectInProjectView<CR>
 
 " open git revision
-nnoremap <leader>gr :action Compare.Selected
+nnoremap <leader>gr :action Compare.Selected<CR>
 
 " tab operation
 nnoremap <leader>tl gtt
