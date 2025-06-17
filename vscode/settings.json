@@ -1,6 +1,6 @@
 {
   "editor.codeActionsOnSave": {
-    "source.fixAll": true
+    "source.fixAll": "explicit"
   },
 
   "eslint.validate": ["javascript", "javascriptreact", "vue"],
@@ -9,7 +9,7 @@
   },
   "editor.guides.bracketPairs": "active",
   "[vue]": {
-    "editor.defaultFormatter": "octref.vetur"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -59,6 +59,7 @@
     "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
   "workbench.colorTheme": "Moegi Dark",
+  "workbench.editor.enablePreview": false,
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": ["<leader>", "w", "q"],
@@ -108,8 +109,16 @@
 
     {
       "before": ["<C-a>"],
-      "after": ["g", "g","V","G"]
+      "after": ["g", "g", "V", "G"]
     },
+    {
+      "before": ["<C-Space>"],
+      "commands": [
+        {
+          "command": "workbench.action.triggerSuggest"
+        }
+      ]
+    }
   ],
   "vim.visualModeKeyBindings": [
     {
@@ -128,6 +137,51 @@
   "vim.hlsearch": true,
   "vim.handleKeys": {
     "<C-f>": false,
-    "<C-j>": false,
-  }
+    "<C-j>": false
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "remote.SSH.remotePlatform": {
+    "aliyun": "linux"
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "gitlens.ai.experimental.provider": "openai",
+  "gitlens.ai.experimental.openai.model": "gpt-4-1106-preview",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "codeium.enableConfig": {
+    "*": true,
+    "markdown": true
+  },
+  "diffEditor.maxComputationTime": 0,
+  "prisma.showPrismaDataPlatformNotification": false,
+  "gitlens.advanced.messages": {
+    "suppressCreatePullRequestPrompt": true
+  },
+  "i18n-ally.displayLanguage": "en-US",
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "editor.inlineSuggest.edits.showCollapsed": true,
+  "mcp": {
+    "servers": {
+      "playwright": {
+        "command": "npx",
+        "args": ["-y", "@playwright/mcp@latest"]
+      }
+    }
+  },
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "tailwindCSS.emmetCompletions": true,
 }
