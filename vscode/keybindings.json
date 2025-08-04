@@ -90,5 +90,10 @@
     "key": "ctrl+d",
     "command": "-editor.action.addSelectionToNextFindMatch",
     "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "redo",
+    "when": "editorTextFocus && vim.active && !inDebugRepl"
   }
 ]
