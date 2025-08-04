@@ -118,7 +118,13 @@
           "command": "workbench.action.triggerSuggest"
         }
       ]
-    }
+    },
+    {
+      "before": ["<C-r>"],
+      "after": ["<C-r>"]
+    },
+    { "before": ["u"], "commands": ["undo"] },
+    { "before": ["<C-r>"], "commands": ["redo"] }
   ],
   "vim.visualModeKeyBindings": [
     {
@@ -128,6 +134,10 @@
     {
       "before": ["L"],
       "after": ["g", "_"]
+    },
+    {
+      "before": ["<C-r>"],
+      "after": ["<C-r>"]
     }
   ],
   "terminal.integrated.env.windows": {},
@@ -137,7 +147,9 @@
   "vim.hlsearch": true,
   "vim.handleKeys": {
     "<C-f>": false,
-    "<C-j>": false
+    "<C-j>": false,
+    "<C-r>": false,
+    "<C-y>": false
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -169,19 +181,22 @@
   "i18n-ally.displayLanguage": "en-US",
   "github.copilot.nextEditSuggestions.enabled": true,
   "editor.inlineSuggest.edits.showCollapsed": true,
-  "mcp": {
-    "servers": {
-      "playwright": {
-        "command": "npx",
-        "args": ["-y", "@playwright/mcp@latest"]
-      }
-    }
-  },
   "github.copilot.enable": {
-    "*": true,
-    "plaintext": false,
-    "markdown": false,
-    "scminput": false
+    "*": false
   },
   "tailwindCSS.emmetCompletions": true,
+  "gitlens.views.scm.grouped.views": {
+    "commits": true,
+    "branches": true,
+    "remotes": true,
+    "stashes": true,
+    "tags": true,
+    "worktrees": true,
+    "contributors": true,
+    "fileHistory": true,
+    "repositories": true,
+    "searchAndCompare": false,
+    "launchpad": false
+  },
+  "http.proxyStrictSSL": false
 }
